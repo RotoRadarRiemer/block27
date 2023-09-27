@@ -1,15 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import Authenticate from "./components/Authenticate";
+import SignUpForm from "./components/SignUpForm";
+import './styles/styles.css';
 
 function App() {
+  const [token, setToken] = useState(null);
 
   return (
-      <div>
+    <div className="App container">
+      <SignUpForm setToken={setToken} />
+      <Authenticate token={token} />
+    </div>
+  );
+}
 
-      </div>
-      )}
-
-
-export default App
+export default App;
